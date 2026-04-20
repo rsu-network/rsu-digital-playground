@@ -23,15 +23,14 @@ export const Vision = () => {
       <div className="container">
         <SectionHeader
           number="01"
-          eyebrow="Vision & Grundidee"
+          eyebrow="Warum dieser Server?"
           title={
             <>
-              Ein digitaler Raum, in dem Kinder{" "}
-              <span className="text-gradient-brand">echte Kompetenzen</span>{" "}
-              entwickeln.
+              Ein Ort, an dem du <span className="text-gradient-brand">selbst</span>{" "}
+              gestalten kannst – ohne Werbung oder Fremde.
             </>
           }
-          description="Der RSU Network Server ist als pädagogisch wertvoller Lernraum konzipiert. Spielerisch entdecken Schülerinnen und Schüler Teamwork, Wirtschaft, Kreativität und digitale Verantwortung – moderiert von Schüler-Admins und betreut durch IT-Lehrkräfte."
+          description="RSU Network ist kein riesiger anonymer Public-Server. Hier kennst du die Leute, mit denen du spielst – und das Ganze wird von Schülern selbst betreut, in Absprache mit IT-Lehrkräften."
         />
 
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
