@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Copy, Check, Server } from "lucide-react";
+import { Copy, Check, Server, MessageCircle } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -81,6 +81,27 @@ export const Join = () => {
               <Button onClick={copy} variant="hero" size="lg">
                 {copied ? <Check size={16} /> : <Copy size={16} />}
                 {copied ? "Kopiert" : "Kopieren"}
+              </Button>
+            </div>
+
+            <div className="mt-4 rounded-2xl border border-border bg-background/60 backdrop-blur p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center gap-4 justify-between">
+              <div className="flex items-start gap-3">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary border border-primary/20">
+                  <MessageCircle size={18} />
+                </div>
+                <div>
+                  <p className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
+                    Discord Community
+                  </p>
+                  <p className="text-sm text-foreground mt-0.5">
+                    Moderierter Server für News, Support & Events
+                  </p>
+                </div>
+              </div>
+              <Button asChild variant="glass" size="lg">
+                <a href={DISCORD_URL} target="_blank" rel="noopener noreferrer">
+                  Discord beitreten
+                </a>
               </Button>
             </div>
 

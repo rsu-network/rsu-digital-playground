@@ -55,8 +55,17 @@ export const Footer = () => {
             </p>
             <ul className="mt-5 space-y-3 text-sm text-muted-foreground">
               <li>Schul-IT Team</li>
-              <li>kontakt@rsu-network.de</li>
-              <li>Discord: rsu-network</li>
+              <li>Server: mc.rsu.network</li>
+              <li>
+                <a
+                  href="https://discord.gg/uREKErvXXf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-foreground transition-colors"
+                >
+                  Discord beitreten →
+                </a>
+              </li>
             </ul>
           </div>
         </div>
