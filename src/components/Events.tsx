@@ -29,7 +29,7 @@ const events = [
     tag: "Umwelt",
     title: "Green Events",
     items: [
-      "„Pflanze 100 Bäume" Event",
+      "„Pflanze 100 Bäume“ Event",
       "Recycling: Items wiederverwerten",
       "Effiziente Energie mit Redstone",
       "Nachhaltige Baukonzepte",
