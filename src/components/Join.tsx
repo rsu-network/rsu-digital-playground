@@ -3,8 +3,9 @@ import { Copy, Check, Server } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
-const SERVER_IP = "play.rsu-network.de";
+const SERVER_IP = "mc.rsu.network";
 const VERSION = "1.21.x · Java Edition";
+const DISCORD_URL = "https://discord.gg/uREKErvXXf";
 
 export const Join = () => {
   const [copied, setCopied] = useState(false);
