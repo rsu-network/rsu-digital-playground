@@ -14,7 +14,42 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      whitelist_applications: {
+        Row: {
+          class_grade: string | null
+          created_at: string
+          email: string
+          id: string
+          minecraft_username: string
+          reason: string | null
+          status: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          class_grade?: string | null
+          created_at?: string
+          email: string
+          id?: string
+          minecraft_username: string
+          reason?: string | null
+          status?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          class_grade?: string | null
+          created_at?: string
+          email?: string
+          id?: string
+          minecraft_username?: string
+          reason?: string | null
+          status?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
