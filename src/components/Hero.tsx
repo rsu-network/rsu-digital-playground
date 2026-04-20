@@ -47,14 +47,14 @@ export const Hero = () => {
           </div>
 
           <h1 className="mt-8 font-display text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight animate-rise" style={{ animationDelay: "120ms" }}>
-            Wo <span className="text-gradient-brand">Lernen</span> auf{" "}
-            <span className="text-gradient-brand">Spielspaß</span> trifft.
+            Unser <span className="text-gradient-brand">Minecraft</span> für{" "}
+            unsere <span className="text-gradient-brand">Schule</span>.
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed animate-rise" style={{ animationDelay: "180ms" }}>
-            RSU Network ist der sichere, kinderfreundliche Minecraft Server unserer Schule.
-            Gemeinsam bauen, kreativ werden und spielerisch wichtige Lebenskompetenzen
-            entwickeln – moderiert, fair und ohne Pay2Win.
+            Bauen nach der Schule, zocken mit deinen Klassenkameraden und chillen
+            ohne Streamer, Werbung oder fremde Leute im Chat. Ein Server von
+            Schülern für Schüler – stabil, fair und ohne Bezahlkram.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-4 animate-rise" style={{ animationDelay: "240ms" }}>
