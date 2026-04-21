@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Copy, Check, Server, MessageCircle } from "lucide-react";
+import { Copy, Check, Server, MessageCircle, School } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -84,30 +84,55 @@ export const Join = () => {
               </Button>
             </div>
 
-            <div className="mt-4 rounded-2xl border border-border bg-background/60 backdrop-blur p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center gap-4 justify-between">
-              <div className="flex items-start gap-3">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary border border-primary/20">
-                  <MessageCircle size={18} />
-                </div>
-                <div>
-                  <p className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
-                    Discord Community
+            <div className="mt-8">
+              <p className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground mb-3">
+                Whitelist · So kommst du drauf
+              </p>
+              <div className="grid sm:grid-cols-2 gap-3">
+                <div className="rounded-2xl border border-border bg-background/60 backdrop-blur p-5 flex flex-col gap-3">
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary border border-primary/20">
+                      <MessageCircle size={18} />
+                    </div>
+                    <div>
+                      <p className="font-display font-semibold text-foreground">Über Discord</p>
+                      <p className="text-xs text-muted-foreground">Moderiert · Schnellster Weg</p>
+                    </div>
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Tritt unserem Discord bei und schreib im Whitelist-Channel deinen
+                    Minecraft-Namen und deine Klasse. Wir schalten dich frei.
                   </p>
-                  <p className="text-sm text-foreground mt-0.5">
-                    Moderierter Server für News, Support & Events
+                  <Button asChild variant="glass" size="sm" className="self-start">
+                    <a href={DISCORD_URL} target="_blank" rel="noopener noreferrer">
+                      Discord beitreten
+                    </a>
+                  </Button>
+                </div>
+
+                <div className="rounded-2xl border border-border bg-background/60 backdrop-blur p-5 flex flex-col gap-3">
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent border border-accent/20">
+                      <School size={18} />
+                    </div>
+                    <div>
+                      <p className="font-display font-semibold text-foreground">In der Schule</p>
+                      <p className="text-xs text-muted-foreground">Persönlich · Zu Anmeldezeiten</p>
+                    </div>
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Komm während unserer Anmeldezeiten in der Schule vorbei. Bring
+                    deinen Minecraft-Namen mit – wir tragen dich direkt ein.
+                  </p>
+                  <p className="text-xs font-mono text-foreground/80">
+                    Termine werden im Discord & per Aushang bekannt gegeben.
                   </p>
                 </div>
               </div>
-              <Button asChild variant="glass" size="lg">
-                <a href={DISCORD_URL} target="_blank" rel="noopener noreferrer">
-                  Discord beitreten
-                </a>
-              </Button>
             </div>
 
-            <p className="mt-4 text-xs text-muted-foreground">
-              * Der Zugang ist exklusiv für Schülerinnen und Schüler unserer Schule.
-              Der erste Login wird über die Klassenleitung freigeschaltet.
+            <p className="mt-6 text-xs text-muted-foreground">
+              * Der Zugang ist exklusiv für Schülerinnen und Schüler der RSU Germering.
             </p>
           </div>
         </div>

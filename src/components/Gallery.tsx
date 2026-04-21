@@ -5,7 +5,7 @@ const placeholders = [
   { tag: "Spawn", aspect: "aspect-[4/3]" },
   { tag: "Skyline", aspect: "aspect-square" },
   { tag: "Burg", aspect: "aspect-[4/3]" },
-  { tag: "Schul-Nachbau", aspect: "aspect-[4/3]" },
+  { tag: "Mittelalter-Dorf", aspect: "aspect-[4/3]" },
   { tag: "Farm", aspect: "aspect-square" },
   { tag: "Redstone", aspect: "aspect-[4/3]" },
   { tag: "Markt", aspect: "aspect-[4/3]" },

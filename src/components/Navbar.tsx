@@ -58,7 +58,7 @@ export const Navbar = () => {
 
         <div className="hidden md:flex items-center gap-2">
           <Button variant="hero" size="sm" asChild>
-            <a href="/whitelist">Whitelist</a>
+            <a href="#mitmachen">Mitmachen</a>
           </Button>
         </div>
 
@@ -85,8 +85,8 @@ export const Navbar = () => {
               </a>
             ))}
             <Button variant="hero" className="mt-2" asChild>
-              <a href="/whitelist" onClick={() => setOpen(false)}>
-                Whitelist
+              <a href="#mitmachen" onClick={() => setOpen(false)}>
+                Mitmachen
               </a>
             </Button>
           </div>
