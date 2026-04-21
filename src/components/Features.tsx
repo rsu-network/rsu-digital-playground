@@ -25,6 +25,7 @@ const modes = [
     icon: Sword,
     title: "Mini-Games",
     text: "Bedwars, SkyWars und Parkour-Maps – wenn du mal Lust auf eine schnelle Runde mit Freunden hast.",
+    comingSoon: true,
   },
   {
     icon: Map,
@@ -40,6 +41,7 @@ const modes = [
     icon: Boxes,
     title: "Freundes-System",
     text: "Adde deine Klasse, bilde Teams, baut zusammen Städte und teleportiert euch direkt zueinander.",
+    comingSoon: true,
   },
 ];
 
@@ -69,9 +71,16 @@ export const Features = () => {
                 <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary border border-primary/20">
                   <m.icon size={20} />
                 </div>
-                <h3 className="mt-5 font-display text-xl font-semibold text-foreground">
-                  {m.title}
-                </h3>
+                <div className="flex items-center gap-2 mt-5">
+                  <h3 className="font-display text-xl font-semibold text-foreground">
+                    {m.title}
+                  </h3>
+                  {(m as any).comingSoon && (
+                    <span className="inline-flex items-center rounded-full bg-accent/15 px-2 py-0.5 text-[10px] font-medium text-accent border border-accent/20">
+                      Bald
+                    </span>
+                  )}
+                </div>
                 <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
                   {m.text}
                 </p>
