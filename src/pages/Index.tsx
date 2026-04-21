@@ -8,6 +8,7 @@ import { Features } from "@/components/Features";
 import { Economy } from "@/components/Economy";
 import { Events } from "@/components/Events";
 import { Gallery } from "@/components/Gallery";
+import { YouTube } from "@/components/YouTube";
 import { Safety } from "@/components/Safety";
 import { Roadmap } from "@/components/Roadmap";
 import { Join } from "@/components/Join";
@@ -27,6 +28,7 @@ const Index = () => {
       <Economy />
       <Events />
       <Gallery />
+      <YouTube />
       <Safety />
       <Roadmap />
       <Join />

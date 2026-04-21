@@ -8,7 +8,8 @@ const links = [
   { href: "#features", label: "Features" },
   { href: "#economy", label: "Economy" },
   { href: "#events", label: "Events" },
-  { href: "#roadmap", label: "Roadmap" },
+  { href: "/plugins", label: "Plugins" },
+  { href: "#youtube", label: "YouTube" },
   { href: "#mitmachen", label: "Mitmachen" },
 ];
 
