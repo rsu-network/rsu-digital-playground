@@ -17,8 +17,9 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         hero: "bg-gradient-brand text-primary-foreground font-semibold shadow-glow hover:shadow-[0_0_60px_-5px_hsl(var(--brand-mint)/0.7)] hover:-translate-y-0.5",
         glass: "bg-foreground/5 border border-foreground/10 text-foreground backdrop-blur-md hover:bg-foreground/10",
-        block: "!rounded-none bg-[hsl(var(--brand-mint))] text-primary-foreground font-pixel uppercase tracking-wider block-3d border-2 border-[hsl(150_30%_10%)] hover:bg-[hsl(var(--brand-mint))]/95",
-        blockAlt: "!rounded-none bg-[hsl(28_55%_35%)] text-foreground font-pixel uppercase tracking-wider block-3d border-2 border-[hsl(28_50%_15%)] hover:bg-[hsl(28_55%_38%)]",
+        block: "!rounded-none bg-[hsl(var(--brand-mint))] text-white font-pixel uppercase tracking-wider block-3d border-[3px] border-[hsl(110_60%_25%)] hover:bg-[hsl(var(--brand-mint))]/95",
+        blockAlt: "!rounded-none bg-[hsl(var(--brand-gold))] text-[hsl(220_40%_15%)] font-pixel uppercase tracking-wider block-3d border-[3px] border-[hsl(28_70%_30%)] hover:bg-[hsl(var(--brand-gold))]/95",
+        blockDiamond: "!rounded-none bg-[hsl(var(--brand-cyan))] text-white font-pixel uppercase tracking-wider block-3d border-[3px] border-[hsl(195_70%_25%)] hover:bg-[hsl(var(--brand-cyan))]/95",
       },
       size: {
         default: "h-10 px-5 py-2",
