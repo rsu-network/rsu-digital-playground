@@ -151,6 +151,37 @@
     mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, black, transparent);
   }
 
+  /* Minecraft-style pixelated dirt/grass strip */
+  .pixel-grass {
+    background-image:
+      linear-gradient(180deg, hsl(95 70% 45%) 0%, hsl(95 70% 45%) 18%, hsl(95 60% 35%) 18%, hsl(95 60% 35%) 28%, hsl(28 55% 35%) 28%, hsl(28 55% 35%) 70%, hsl(28 50% 28%) 70%, hsl(28 50% 28%) 100%);
+    image-rendering: pixelated;
+  }
+
+  /* Chunky 3D block button (Minecraft style) */
+  .block-3d {
+    box-shadow:
+      inset 0 3px 0 0 hsl(0 0% 100% / 0.18),
+      inset 0 -4px 0 0 hsl(0 0% 0% / 0.35),
+      0 5px 0 0 hsl(150 30% 0% / 0.5);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+  }
+  .block-3d:hover {
+    transform: translateY(-2px);
+  }
+  .block-3d:active {
+    transform: translateY(3px);
+    box-shadow:
+      inset 0 3px 0 0 hsl(0 0% 100% / 0.18),
+      inset 0 -2px 0 0 hsl(0 0% 0% / 0.35),
+      0 1px 0 0 hsl(150 30% 0% / 0.5);
+  }
+
+  .pixelated {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+  }
+
   .noise {
     position: relative;
   }
@@ -167,6 +198,9 @@
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
+  .animate-float-slow {
+    animation: float 9s ease-in-out infinite;
+  }
   .animate-pulse-glow {
     animation: pulse-glow 3s ease-in-out infinite;
   }
@@ -177,6 +211,17 @@
   .animate-rise {
     animation: rise 0.8s var(--ease-out-expo) both;
   }
+  .animate-spin-slow {
+    animation: spin 30s linear infinite;
+  }
+  .animate-wiggle {
+    animation: wiggle 4s ease-in-out infinite;
+  }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-4deg); }
+  50% { transform: rotate(4deg); }
 }
 
 @keyframes float {
