@@ -1,21 +1,24 @@
-import { Cpu, Globe, Clock, Wifi } from "lucide-react";
+import grassBlock from "@/assets/mc/grass.png";
+import diamond from "@/assets/mc/diamond-ore.png";
+import emerald from "@/assets/mc/emerald.png";
+import gold from "@/assets/mc/gold.png";
 
 const stats = [
-  { icon: Cpu, value: "1.21.x", label: "Java Edition", color: "bg-primary/15 text-primary border-primary/30" },
-  { icon: Wifi, value: "<50ms", label: "Ping aus DE", color: "bg-secondary/15 text-secondary border-secondary/30" },
-  { icon: Globe, value: "EU", label: "Frankfurt", color: "bg-accent/15 text-accent border-accent/30" },
-  { icon: Clock, value: "24/7", label: "Online", color: "bg-destructive/15 text-destructive border-destructive/30" },
+  { img: grassBlock, value: "1.21.x", label: "Java Edition", color: "border-primary/40 bg-primary/10" },
+  { img: diamond, value: "<50ms", label: "Ping aus DE", color: "border-secondary/40 bg-secondary/10" },
+  { img: emerald, value: "EU", label: "Frankfurt", color: "border-primary/40 bg-primary/10" },
+  { img: gold, value: "24/7", label: "Online", color: "border-accent/40 bg-accent/10" },
 ];
 
 export const Stats = () => {
   return (
-    <section className="relative py-12 border-y border-border/60 bg-card/30 backdrop-blur">
+    <section className="relative py-12 border-y-2 border-border/60 bg-card/40 backdrop-blur">
       <div className="container">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {stats.map((s) => (
             <div key={s.label} className="flex items-center gap-4">
-              <div className={`flex h-12 w-12 items-center justify-center rounded-2xl border-2 ${s.color}`}>
-                <s.icon size={20} />
+              <div className={`flex h-14 w-14 items-center justify-center rounded-none border-2 ${s.color} shadow-sm`}>
+                <img src={s.img} alt="" aria-hidden className="h-9 w-9 pixelated" />
               </div>
               <div>
                 <div className="font-pixel text-base sm:text-lg text-foreground tabular-nums">
