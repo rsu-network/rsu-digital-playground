@@ -67,6 +67,7 @@ export default {
         display: ["Space Grotesk", "system-ui", "sans-serif"],
         sans: ["Inter", "system-ui", "sans-serif"],
         mono: ["JetBrains Mono", "ui-monospace", "monospace"],
+        pixel: ['"Press Start 2P"', "monospace"],
       },
       keyframes: {
         "accordion-down": {
