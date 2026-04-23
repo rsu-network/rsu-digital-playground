@@ -1,27 +1,25 @@
 import { SectionHeader } from "./SectionHeader";
-import {
-  Users,
-  Coins,
-  Lightbulb,
-  Heart,
-  Smartphone,
-  ShieldCheck,
-} from "lucide-react";
+import villager from "@/assets/mc/villager-head.png";
+import emerald from "@/assets/mc/emerald.png";
+import crafting from "@/assets/mc/crafting.png";
+import heart from "@/assets/mc/heart.png";
+import enderman from "@/assets/mc/enderman-head.png";
+import creeperHead from "@/assets/mc/creeper-render.png";
 
 const goals = [
-  { icon: Users, title: "Teamwork 🤝", text: "Bau riesige Städte mit deinen Freunden – gemeinsam macht's mehr Spaß!", color: "primary" },
-  { icon: Coins, title: "Wirtschaft 💎", text: "Handel mit Items, verdien Coins durch Jobs und werde reich.", color: "accent" },
-  { icon: Lightbulb, title: "Kreativität 🎨", text: "Lass deiner Fantasie freien Lauf – bau was du willst!", color: "secondary" },
-  { icon: Heart, title: "Verantwortung ❤️", text: "Fair spielen, anderen helfen und cool miteinander umgehen.", color: "destructive" },
-  { icon: Smartphone, title: "Medienkompetenz 📱", text: "Lerne, wie das Internet funktioniert – ganz nebenbei beim Zocken.", color: "primary" },
-  { icon: ShieldCheck, title: "Sicherheit 🛡️", text: "Geschützter Raum, keine Fremden, klare Regeln. Versprochen.", color: "secondary" },
+  { img: villager, title: "Teamwork 🤝", text: "Bau riesige Städte mit deinen Freunden – gemeinsam macht's mehr Spaß!", color: "primary" },
+  { img: emerald, title: "Wirtschaft 💎", text: "Handel mit Items, verdien Coins durch Jobs und werde reich.", color: "accent" },
+  { img: crafting, title: "Kreativität 🎨", text: "Lass deiner Fantasie freien Lauf – bau was du willst!", color: "secondary" },
+  { img: heart, title: "Verantwortung ❤️", text: "Fair spielen, anderen helfen und cool miteinander umgehen.", color: "destructive" },
+  { img: enderman, title: "Medienkompetenz 📱", text: "Lerne, wie das Internet funktioniert – ganz nebenbei beim Zocken.", color: "primary" },
+  { img: creeperHead, title: "Sicherheit 🛡️", text: "Geschützter Raum, keine Fremden, klare Regeln. Versprochen.", color: "secondary" },
 ];
 
 const colorMap: Record<string, string> = {
-  primary: "bg-primary/15 text-primary border-primary/30",
-  accent: "bg-accent/15 text-accent border-accent/30",
-  secondary: "bg-secondary/15 text-secondary border-secondary/30",
-  destructive: "bg-destructive/15 text-destructive border-destructive/30",
+  primary: "bg-primary/15 border-primary/40",
+  accent: "bg-accent/15 border-accent/40",
+  secondary: "bg-secondary/15 border-secondary/40",
+  destructive: "bg-destructive/15 border-destructive/40",
 };
 
 export const Vision = () => {
@@ -49,8 +47,8 @@ export const Vision = () => {
             >
               <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-primary/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
               <div className="relative">
-                <div className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl border-2 ${colorMap[g.color]}`}>
-                  <g.icon size={22} />
+                <div className={`inline-flex h-16 w-16 items-center justify-center rounded-none border-2 ${colorMap[g.color]} shadow-md`}>
+                  <img src={g.img} alt="" aria-hidden className="h-10 w-10 pixelated" />
                 </div>
                 <h3 className="mt-5 font-display text-xl font-semibold text-foreground">
                   {g.title}

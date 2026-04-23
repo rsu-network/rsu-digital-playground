@@ -1,8 +1,26 @@
 import { Logo } from "./Logo";
+import creeper from "@/assets/mc/creeper-render.png";
+import pig from "@/assets/mc/pig-head.png";
+import villager from "@/assets/mc/villager-head.png";
+import enderman from "@/assets/mc/enderman-head.png";
+import skeleton from "@/assets/mc/skeleton-head.png";
+import zombie from "@/assets/mc/zombie-head.png";
 
 export const Footer = () => {
   return (
-    <footer className="relative border-t border-border mt-12">
+    <footer className="relative border-t-2 border-border mt-12 overflow-hidden">
+      <div className="relative flex items-end justify-center gap-6 sm:gap-10 pb-1 pt-6 px-4 flex-wrap">
+        {[creeper, zombie, skeleton, villager, pig, enderman].map((m, i) => (
+          <img
+            key={i}
+            src={m}
+            alt=""
+            aria-hidden
+            className="h-12 w-12 sm:h-16 sm:w-16 pixelated animate-float"
+            style={{ animationDelay: `${i * 0.3}s` }}
+          />
+        ))}
+      </div>
       <div className="pixel-grass h-6 pixelated" aria-hidden />
       <div className="container py-16">
         <div className="grid md:grid-cols-3 gap-12">
