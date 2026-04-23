@@ -78,9 +78,9 @@ export const Join = () => {
                   {SERVER_IP}
                 </p>
               </div>
-              <Button onClick={copy} variant="hero" size="lg">
+              <Button onClick={copy} variant="block" size="lg">
                 {copied ? <Check size={16} /> : <Copy size={16} />}
-                {copied ? "Kopiert" : "Kopieren"}
+                {copied ? "KOPIERT" : "KOPIEREN"}
               </Button>
             </div>
 

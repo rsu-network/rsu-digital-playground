@@ -24,11 +24,11 @@ export const SectionHeader = ({
       }`}
     >
       {number && (
-        <span className="font-mono text-xs text-primary tabular-nums">
+        <span className="font-pixel text-[10px] text-primary tabular-nums">
           {number}
         </span>
       )}
-      <span className="font-mono text-xs uppercase tracking-[0.25em] text-muted-foreground">
+      <span className="font-pixel text-[9px] uppercase tracking-[0.25em] text-muted-foreground">
         {eyebrow}
       </span>
     </div>
