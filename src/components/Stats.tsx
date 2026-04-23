@@ -18,10 +18,10 @@ export const Stats = () => {
                 <s.icon size={20} />
               </div>
               <div>
-                <div className="font-display text-2xl font-bold text-foreground tabular-nums">
+                <div className="font-pixel text-base sm:text-lg text-foreground tabular-nums">
                   {s.value}
                 </div>
-                <div className="text-xs uppercase tracking-wider text-muted-foreground">
+                <div className="text-xs uppercase tracking-wider text-muted-foreground mt-1">
                   {s.label}
                 </div>
               </div>

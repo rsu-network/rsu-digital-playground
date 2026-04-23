@@ -3,6 +3,7 @@ import { Logo } from "./Logo";
 export const Footer = () => {
   return (
     <footer className="relative border-t border-border mt-12">
+      <div className="pixel-grass h-6 pixelated" aria-hidden />
       <div className="container py-16">
         <div className="grid md:grid-cols-3 gap-12">
           <div>

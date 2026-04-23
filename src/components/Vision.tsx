@@ -9,12 +9,12 @@ import {
 } from "lucide-react";
 
 const goals = [
-  { icon: Users, title: "Teamwork", text: "Zusammen bauen, planen, erreichen." },
-  { icon: Coins, title: "Wirtschaft", text: "Ressourcen verstehen & verwalten." },
-  { icon: Lightbulb, title: "Kreativität", text: "Ideen frei umsetzen." },
-  { icon: Heart, title: "Verantwortung", text: "Fair handeln, Konflikte lösen." },
-  { icon: Smartphone, title: "Medienkompetenz", text: "Bewusster digitaler Umgang." },
-  { icon: ShieldCheck, title: "Sicherheit", text: "Geschützter Raum, klare Regeln." },
+  { icon: Users, title: "Teamwork 🤝", text: "Bau riesige Städte mit deinen Freunden – gemeinsam macht's mehr Spaß!" },
+  { icon: Coins, title: "Wirtschaft 💎", text: "Handel mit Items, verdien Coins durch Jobs und werde reich." },
+  { icon: Lightbulb, title: "Kreativität 🎨", text: "Lass deiner Fantasie freien Lauf – bau was du willst!" },
+  { icon: Heart, title: "Verantwortung ❤️", text: "Fair spielen, anderen helfen und cool miteinander umgehen." },
+  { icon: Smartphone, title: "Medienkompetenz 📱", text: "Lerne, wie das Internet funktioniert – ganz nebenbei beim Zocken." },
+  { icon: ShieldCheck, title: "Sicherheit 🛡️", text: "Geschützter Raum, keine Fremden, klare Regeln. Versprochen." },
 ];
 
 export const Vision = () => {
