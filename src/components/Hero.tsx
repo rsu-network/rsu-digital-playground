@@ -7,6 +7,13 @@ import creeper from "@/assets/mc/creeper.png";
 import pickaxe from "@/assets/mc/pickaxe.png";
 import tnt from "@/assets/mc/tnt.png";
 import gold from "@/assets/mc/gold.png";
+import sword from "@/assets/mc/sword.png";
+import apple from "@/assets/mc/apple.png";
+import emerald from "@/assets/mc/emerald.png";
+import enderPearl from "@/assets/mc/ender-pearl.png";
+import creeperHead from "@/assets/mc/creeper-render.png";
+import pigHead from "@/assets/mc/pig-head.png";
+import villagerHead from "@/assets/mc/villager-head.png";
 import { Sparkles, ShieldCheck, Users } from "lucide-react";
 
 export const Hero = () => {
