@@ -95,6 +95,75 @@ export const Hero = () => {
         width={160}
         height={160}
       />
+      <img
+        src={sword}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute top-1/3 left-[3%] w-14 sm:w-20 animate-float pixelated drop-shadow-xl hidden md:block"
+        style={{ animationDelay: "2.5s", transform: "rotate(25deg)" }}
+        loading="lazy"
+        width={160}
+        height={160}
+      />
+      <img
+        src={apple}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute top-[58%] left-[12%] w-10 sm:w-14 animate-float-slow pixelated hidden md:block"
+        style={{ animationDelay: "3s" }}
+        loading="lazy"
+        width={64}
+        height={64}
+      />
+      <img
+        src={emerald}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute top-[18%] right-[28%] w-10 sm:w-12 animate-float pixelated drop-shadow-xl"
+        style={{ animationDelay: "1.8s" }}
+        loading="lazy"
+        width={64}
+        height={64}
+      />
+      <img
+        src={enderPearl}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute top-[70%] right-[44%] w-10 sm:w-12 animate-float-slow pixelated hidden md:block"
+        style={{ animationDelay: "2.2s" }}
+        loading="lazy"
+        width={64}
+        height={64}
+      />
+      <img
+        src={creeperHead}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute bottom-20 right-[5%] w-20 sm:w-28 animate-wiggle drop-shadow-2xl hidden md:block"
+        loading="lazy"
+        width={200}
+        height={200}
+      />
+      <img
+        src={pigHead}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute bottom-24 left-[42%] w-16 sm:w-20 animate-float pixelated hidden lg:block"
+        style={{ animationDelay: "1.2s" }}
+        loading="lazy"
+        width={160}
+        height={160}
+      />
+      <img
+        src={villagerHead}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute top-24 left-[32%] w-14 sm:w-18 animate-float-slow pixelated hidden lg:block"
+        style={{ animationDelay: "2.8s" }}
+        loading="lazy"
+        width={160}
+        height={160}
+      />
 
       <div className="container relative">
         <div className="max-w-3xl">
