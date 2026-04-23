@@ -33,42 +33,54 @@ export const Gallery = () => {
         />
 
         <div className="mt-14 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-          {placeholders.map((p, i) => (
-            <figure
-              key={i}
-              className={`group relative overflow-hidden rounded-2xl border border-border bg-gradient-card ${p.aspect}`}
-            >
-              {/* Pixelated minecraft-style placeholder pattern */}
-              <div
-                className="absolute inset-0 opacity-40"
-                style={{
-                  backgroundImage: `
-                    linear-gradient(45deg, hsl(var(--muted)) 25%, transparent 25%),
-                    linear-gradient(-45deg, hsl(var(--muted)) 25%, transparent 25%),
-                    linear-gradient(45deg, transparent 75%, hsl(var(--muted)) 75%),
-                    linear-gradient(-45deg, transparent 75%, hsl(var(--muted)) 75%)
-                  `,
-                  backgroundSize: "24px 24px",
-                  backgroundPosition: "0 0, 0 12px, 12px -12px, -12px 0",
-                }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/10" />
+          {placeholders.map((p, i) => {
+            const palettes = [
+              ["hsl(95 70% 45%)", "hsl(28 55% 35%)"], // grass
+              ["hsl(200 80% 55%)", "hsl(210 60% 30%)"], // water
+              ["hsl(45 80% 55%)", "hsl(30 60% 40%)"], // sand
+              ["hsl(0 0% 55%)", "hsl(0 0% 30%)"], // stone
+              ["hsl(280 50% 50%)", "hsl(280 40% 25%)"], // end
+              ["hsl(15 70% 45%)", "hsl(15 60% 25%)"], // nether
+            ];
+            const [c1, c2] = palettes[i % palettes.length];
+            return (
+              <figure
+                key={i}
+                className={`group relative overflow-hidden rounded-2xl border-2 border-border bg-gradient-card ${p.aspect} hover:border-primary/60 transition`}
+              >
+                {/* Pixelated minecraft-style block pattern */}
+                <div
+                  className="absolute inset-0 pixelated"
+                  style={{
+                    backgroundImage: `
+                      linear-gradient(45deg, ${c1} 25%, transparent 25%),
+                      linear-gradient(-45deg, ${c1} 25%, transparent 25%),
+                      linear-gradient(45deg, transparent 75%, ${c2} 75%),
+                      linear-gradient(-45deg, transparent 75%, ${c2} 75%)
+                    `,
+                    backgroundSize: "20px 20px",
+                    backgroundPosition: "0 0, 0 10px, 10px -10px, -10px 0",
+                    opacity: 0.55,
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-background/40 via-transparent to-background/60" />
 
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-background/70 backdrop-blur border border-border text-muted-foreground">
-                  <ImageIcon size={18} />
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-none border-2 border-foreground/30 bg-background/80 backdrop-blur text-foreground group-hover:scale-110 transition-transform">
+                    <ImageIcon size={18} />
+                  </div>
+                  <p className="mt-3 font-pixel text-[8px] uppercase tracking-[0.2em] text-foreground/70">
+                    Bald
+                  </p>
+                  <p className="mt-2 font-display text-sm font-semibold text-foreground drop-shadow">
+                    {p.tag}
+                  </p>
                 </div>
-                <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-                  Platzhalter
-                </p>
-                <p className="mt-1 font-display text-sm font-semibold text-foreground">
-                  {p.tag}
-                </p>
-              </div>
 
-              <div className="absolute inset-0 ring-1 ring-inset ring-border/40 group-hover:ring-primary/40 transition" />
-            </figure>
-          ))}
+                <div className="absolute inset-0 ring-1 ring-inset ring-border/40 group-hover:ring-primary/40 transition" />
+              </figure>
+            );
+          })}
         </div>
 
         <p className="mt-8 text-center text-xs text-muted-foreground">
