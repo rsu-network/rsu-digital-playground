@@ -48,13 +48,13 @@ export const Footer = () => {
             </p>
             <ul className="mt-5 space-y-3 text-sm">
               {[
-                ["Vision", "#vision"],
-                ["Tutorial", "#tutorial"],
-                ["Economy", "#economy"],
-                ["Events", "#events"],
-                ["Sicherheit", "#sicherheit"],
-                ["Mitmachen", "#mitmachen"],
-                ["FAQ", "#faq"],
+                ["Vision", "#/vision"],
+                ["Tutorial", "#/tutorial"],
+                ["Economy", "#/economy"],
+                ["Events", "#/events"],
+                ["Sicherheit", "#/sicherheit"],
+                ["Mitmachen", "#/mitmachen"],
+                ["FAQ", "#/faq"],
               ].map(([l, h]) => (
                 <li key={h}>
                   <a

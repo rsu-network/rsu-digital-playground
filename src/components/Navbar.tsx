@@ -4,13 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { href: "#vision", label: "Vision" },
-  { href: "#features", label: "Features" },
-  { href: "#economy", label: "Economy" },
-  { href: "#events", label: "Events" },
-  { href: "/plugins", label: "Plugins" },
-  { href: "#youtube", label: "YouTube" },
-  { href: "#mitmachen", label: "Mitmachen" },
+  { href: "#/", label: "Home" },
+  { href: "#/vision", label: "Vision" },
+  { href: "#/features", label: "Features" },
+  { href: "#/economy", label: "Economy" },
+  { href: "#/events", label: "Events" },
+  { href: "#/plugins", label: "Plugins" },
+  { href: "#/youtube", label: "YouTube" },
+  { href: "#/mitmachen", label: "Mitmachen" },
 ];
 
 export const Navbar = () => {
@@ -33,7 +34,7 @@ export const Navbar = () => {
       }`}
     >
       <nav className="container flex h-16 items-center justify-between">
-        <a href="#top" className="flex items-center gap-3 group">
+        <a href="#/" className="flex items-center gap-3 group">
           <Logo size={36} className="rounded-lg transition-transform group-hover:scale-105" />
           <div className="flex flex-col leading-none">
             <span className="font-display text-base font-bold tracking-tight text-foreground">
