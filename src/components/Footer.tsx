@@ -1,16 +1,19 @@
 import { Logo } from "./Logo";
-import creeper from "@/assets/mc/creeper-render.png";
-import pig from "@/assets/mc/pig-head.png";
-import villager from "@/assets/mc/villager-head.png";
-import enderman from "@/assets/mc/enderman-head.png";
-import skeleton from "@/assets/mc/skeleton-head.png";
-import zombie from "@/assets/mc/zombie-head.png";
+
+const mobImages = [
+  "/mc/creeper-render.png",
+  "/mc/zombie-head.png",
+  "/mc/skeleton-head.png",
+  "/mc/villager-head.png",
+  "/mc/pig-head.png",
+  "/mc/enderman-head.png",
+];
 
 export const Footer = () => {
   return (
     <footer className="relative border-t-2 border-border mt-12 overflow-hidden">
       <div className="relative flex items-end justify-center gap-6 sm:gap-10 pb-1 pt-6 px-4 flex-wrap">
-        {[creeper, zombie, skeleton, villager, pig, enderman].map((m, i) => (
+        {mobImages.map((m, i) => (
           <img
             key={i}
             src={m}

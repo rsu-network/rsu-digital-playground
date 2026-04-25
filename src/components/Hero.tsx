@@ -1,19 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Logo } from "./Logo";
-import heroImg from "@/assets/hero-world.jpg";
-import grassBlock from "@/assets/mc/grass.png";
-import diamondOre from "@/assets/mc/diamond-ore.png";
-import creeper from "@/assets/mc/creeper.png";
-import pickaxe from "@/assets/mc/pickaxe.png";
-import tnt from "@/assets/mc/tnt.png";
-import gold from "@/assets/mc/gold.png";
-import sword from "@/assets/mc/sword.png";
-import apple from "@/assets/mc/apple.png";
-import emerald from "@/assets/mc/emerald.png";
-import enderPearl from "@/assets/mc/ender-pearl.png";
-import creeperHead from "@/assets/mc/creeper-render.png";
-import pigHead from "@/assets/mc/pig-head.png";
-import villagerHead from "@/assets/mc/villager-head.png";
 import { Sparkles, ShieldCheck, Users } from "lucide-react";
 
 export const Hero = () => {
@@ -26,7 +12,7 @@ export const Hero = () => {
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-sky" />
         <img
-          src={heroImg}
+          src="/hero-world.jpg"
           alt="Minecraft Welt mit schwebenden Inseln"
           className="h-full w-full object-cover opacity-50 mix-blend-multiply"
           width={1920}
@@ -38,7 +24,7 @@ export const Hero = () => {
 
       {/* Floating real Minecraft blocks - decorative */}
       <img
-        src={grassBlock}
+        src="/mc/grass.png"
         alt=""
         aria-hidden
         className="pointer-events-none absolute top-32 right-[8%] w-24 sm:w-32 animate-float pixelated drop-shadow-2xl"
@@ -47,7 +33,7 @@ export const Hero = () => {
         height={160}
       />
       <img
-        src={diamondOre}
+        src="/mc/diamond-ore.png"
         alt=""
         aria-hidden
         className="pointer-events-none absolute bottom-44 right-[18%] w-20 sm:w-28 animate-float-slow pixelated drop-shadow-2xl"
@@ -57,7 +43,7 @@ export const Hero = () => {
         height={160}
       />
       <img
-        src={creeper}
+        src="/mc/creeper.png"
         alt=""
         aria-hidden
         className="pointer-events-none absolute top-1/2 right-[3%] w-16 sm:w-24 animate-wiggle pixelated drop-shadow-xl hidden md:block"
@@ -66,7 +52,7 @@ export const Hero = () => {
         height={160}
       />
       <img
-        src={pickaxe}
+        src="/mc/pickaxe.png"
         alt=""
         aria-hidden
         className="pointer-events-none absolute bottom-32 right-[36%] w-14 sm:w-20 animate-float pixelated hidden lg:block"
@@ -76,7 +62,7 @@ export const Hero = () => {
         height={160}
       />
       <img
-        src={tnt}
+        src="/mc/tnt.png"
         alt=""
         aria-hidden
         className="pointer-events-none absolute top-40 left-[5%] w-16 sm:w-20 animate-float-slow pixelated drop-shadow-xl hidden lg:block"
@@ -86,7 +72,7 @@ export const Hero = () => {
         height={160}
       />
       <img
-        src={gold}
+        src="/mc/gold.png"
         alt=""
         aria-hidden
         className="pointer-events-none absolute bottom-52 left-[8%] w-12 animate-float pixelated hidden lg:block"
@@ -96,7 +82,7 @@ export const Hero = () => {
         height={160}
       />
       <img
-        src={sword}
+        src="/mc/sword.png"
         alt=""
         aria-hidden
         className="pointer-events-none absolute top-1/3 left-[3%] w-14 sm:w-20 animate-float pixelated drop-shadow-xl hidden md:block"
@@ -106,7 +92,7 @@ export const Hero = () => {
         height={160}
       />
       <img
-        src={apple}
+        src="/mc/apple.png"
         alt=""
         aria-hidden
         className="pointer-events-none absolute top-[58%] left-[12%] w-10 sm:w-14 animate-float-slow pixelated hidden md:block"
@@ -116,7 +102,7 @@ export const Hero = () => {
         height={64}
       />
       <img
-        src={emerald}
+        src="/mc/emerald.png"
         alt=""
         aria-hidden
         className="pointer-events-none absolute top-[18%] right-[28%] w-10 sm:w-12 animate-float pixelated drop-shadow-xl"
@@ -126,7 +112,7 @@ export const Hero = () => {
         height={64}
       />
       <img
-        src={enderPearl}
+        src="/mc/ender-pearl.png"
         alt=""
         aria-hidden
         className="pointer-events-none absolute top-[70%] right-[44%] w-10 sm:w-12 animate-float-slow pixelated hidden md:block"
@@ -136,7 +122,7 @@ export const Hero = () => {
         height={64}
       />
       <img
-        src={creeperHead}
+        src="/mc/creeper-render.png"
         alt=""
         aria-hidden
         className="pointer-events-none absolute bottom-20 right-[5%] w-20 sm:w-28 animate-wiggle drop-shadow-2xl hidden md:block"
@@ -145,7 +131,7 @@ export const Hero = () => {
         height={200}
       />
       <img
-        src={pigHead}
+        src="/mc/pig-head.png"
         alt=""
         aria-hidden
         className="pointer-events-none absolute bottom-24 left-[42%] w-16 sm:w-20 animate-float pixelated hidden lg:block"
@@ -155,7 +141,7 @@ export const Hero = () => {
         height={160}
       />
       <img
-        src={villagerHead}
+        src="/mc/villager-head.png"
         alt=""
         aria-hidden
         className="pointer-events-none absolute top-24 left-[32%] w-14 sm:w-18 animate-float-slow pixelated hidden lg:block"

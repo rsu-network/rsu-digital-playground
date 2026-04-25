@@ -1,18 +1,12 @@
 import { SectionHeader } from "./SectionHeader";
-import villager from "@/assets/mc/villager-head.png";
-import emerald from "@/assets/mc/emerald.png";
-import crafting from "@/assets/mc/crafting.png";
-import heart from "@/assets/mc/heart.png";
-import enderman from "@/assets/mc/enderman-head.png";
-import creeperHead from "@/assets/mc/creeper-render.png";
 
 const goals = [
-  { img: villager, title: "Teamwork 🤝", text: "Bau riesige Städte mit deinen Freunden – gemeinsam macht's mehr Spaß!", color: "primary" },
-  { img: emerald, title: "Wirtschaft 💎", text: "Handel mit Items, verdien Coins durch Jobs und werde reich.", color: "accent" },
-  { img: crafting, title: "Kreativität 🎨", text: "Lass deiner Fantasie freien Lauf – bau was du willst!", color: "secondary" },
-  { img: heart, title: "Verantwortung ❤️", text: "Fair spielen, anderen helfen und cool miteinander umgehen.", color: "destructive" },
-  { img: enderman, title: "Medienkompetenz 📱", text: "Lerne, wie das Internet funktioniert – ganz nebenbei beim Zocken.", color: "primary" },
-  { img: creeperHead, title: "Sicherheit 🛡️", text: "Geschützter Raum, keine Fremden, klare Regeln. Versprochen.", color: "secondary" },
+  { img: "/mc/villager-head.png", title: "Teamwork 🤝", text: "Bau riesige Städte mit deinen Freunden – gemeinsam macht's mehr Spaß!", color: "primary" },
+  { img: "/mc/emerald.png", title: "Wirtschaft 💎", text: "Handel mit Items, verdien Coins durch Jobs und werde reich.", color: "accent" },
+  { img: "/mc/crafting.png", title: "Kreativität 🎨", text: "Lass deiner Fantasie freien Lauf – bau was du willst!", color: "secondary" },
+  { img: "/mc/heart.png", title: "Verantwortung ❤️", text: "Fair spielen, anderen helfen und cool miteinander umgehen.", color: "destructive" },
+  { img: "/mc/enderman-head.png", title: "Medienkompetenz 📱", text: "Lerne, wie das Internet funktioniert – ganz nebenbei beim Zocken.", color: "primary" },
+  { img: "/mc/creeper-render.png", title: "Sicherheit 🛡️", text: "Geschützter Raum, keine Fremden, klare Regeln. Versprochen.", color: "secondary" },
 ];
 
 const colorMap: Record<string, string> = {
