@@ -1,13 +1,8 @@
-import grassBlock from "@/assets/mc/grass.png";
-import diamond from "@/assets/mc/diamond-ore.png";
-import emerald from "@/assets/mc/emerald.png";
-import gold from "@/assets/mc/gold.png";
-
 const stats = [
-  { img: grassBlock, value: "1.21.x", label: "Java Edition", color: "border-primary/40 bg-primary/10" },
-  { img: diamond, value: "<50ms", label: "Ping aus DE", color: "border-secondary/40 bg-secondary/10" },
-  { img: emerald, value: "EU", label: "Frankfurt", color: "border-primary/40 bg-primary/10" },
-  { img: gold, value: "24/7", label: "Online", color: "border-accent/40 bg-accent/10" },
+  { img: "/mc/grass.png", value: "1.21.x", label: "Java Edition", color: "border-primary/40 bg-primary/10" },
+  { img: "/mc/diamond-ore.png", value: "<50ms", label: "Ping aus DE", color: "border-secondary/40 bg-secondary/10" },
+  { img: "/mc/emerald.png", value: "EU", label: "Frankfurt", color: "border-primary/40 bg-primary/10" },
+  { img: "/mc/gold.png", value: "24/7", label: "Online", color: "border-accent/40 bg-accent/10" },
 ];
 
 export const Stats = () => {
