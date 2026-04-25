@@ -202,10 +202,10 @@ export const Hero = () => {
 
           <div className="mt-10 flex flex-wrap items-center gap-4 animate-rise" style={{ animationDelay: "240ms" }}>
             <Button variant="block" size="xl" asChild>
-              <a href="#mitmachen">▶ Jetzt mitmachen</a>
+              <a href="#/mitmachen">▶ Jetzt mitmachen</a>
             </Button>
             <Button variant="blockDiamond" size="xl" asChild>
-              <a href="#vision">💎 Konzept ansehen</a>
+              <a href="#/vision">💎 Konzept ansehen</a>
             </Button>
           </div>
 
