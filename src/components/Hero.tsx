@@ -115,7 +115,7 @@ export const Hero = () => {
         src="/mc/ender-pearl.png"
         alt=""
         aria-hidden
-        className="pointer-events-none absolute top-[70%] right-[44%] w-10 sm-sm:w-12 animate-float-slow pixelated hidden md:block"
+        className="pointer-events-none absolute top-[70%] right-[44%] w-10 sm:w-12 animate-float-slow pixelated hidden md:block"
         style={{ animationDelay: "2.2s" }}
         loading="lazy"
         width={64}
@@ -150,3 +150,78 @@ export const Hero = () => {
         width={160}
         height={160}
       />
+
+      <div className="container relative">
+        <div className="max-w-3xl">
+          {/* Eyebrow */}
+          <div className="inline-flex items-center gap-2 rounded-full border-2 border-primary/40 bg-white/90 backdrop-blur px-4 py-1.5 text-xs font-medium text-foreground animate-rise shadow-md">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-60" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
+            </span>
+            <span className="font-pixel text-[9px]">SERVER IN VORBEREITUNG · BETA</span>
+          </div>
+
+          <div className="mt-6 flex items-center gap-5 animate-rise" style={{ animationDelay: "60ms" }}>
+            <Logo size={84} className="rounded-2xl shadow-glow animate-float" />
+            <div className="hidden sm:block h-16 w-px bg-border" />
+            <div className="hidden sm:block">
+              <p className="font-pixel text-[10px] uppercase tracking-[0.2em] text-primary">
+                Pädagogischer Server
+              </p>
+              <p className="font-display text-lg text-foreground">
+                Schul Minecraft Network
+              </p>
+            </div>
+          </div>
+
+          <h1 className="mt-8 font-display text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight animate-rise" style={{ animationDelay: "120ms" }}>
+            Unser <span className="text-gradient-brand">Minecraft</span> für{" "}
+            unsere <span className="text-gradient-rainbow">Schule</span>.
+          </h1>
+
+          <p className="mt-6 max-w-2xl text-lg text-foreground/80 leading-relaxed animate-rise" style={{ animationDelay: "180ms" }}>
+            Bauen nach der Schule, zocken mit deinen Klassenkameraden und chillen
+            ohne Streamer, Werbung oder fremde Leute im Chat. Ein Server von
+            Schülern für Schüler – stabil, fair und ohne Bezahlkram.
+          </p>
+
+          <div className="mt-10 flex flex-wrap items-center gap-4 animate-rise" style={{ animationDelay: "240ms" }}>
+            <Button variant="block" size="xl" asChild>
+              <a href="#/mitmachen">▶ Jetzt mitmachen</a>
+            </Button>
+            <Button variant="blockDiamond" size="xl" asChild>
+              <a href="#/vision">💎 Konzept ansehen</a>
+            </Button>
+          </div>
+
+          {/* Pills */}
+          <div className="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-2xl animate-rise" style={{ animationDelay: "300ms" }}>
+            {[
+              { icon: ShieldCheck, label: "100% kindersicher", color: "text-primary", bg: "bg-primary/10", border: "border-primary/30" },
+              { icon: Sparkles, label: "Pädagogische Events", color: "text-accent", bg: "bg-accent/10", border: "border-accent/30" },
+              { icon: Users, label: "Faire Community", color: "text-secondary", bg: "bg-secondary/10", border: "border-secondary/30" },
+            ].map((p) => (
+              <div
+                key={p.label}
+                className={`flex items-center gap-3 rounded-2xl border-2 ${p.border} ${p.bg} bg-white/70 backdrop-blur px-4 py-3 shadow-sm`}
+              >
+                <p.icon className={p.color} size={20} />
+                <span className="text-sm font-medium text-foreground">{p.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Scroll cue */}
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-foreground/60">
+        <span className="font-pixel text-[9px] uppercase tracking-[0.3em]">SCROLLEN</span>
+        <div className="h-10 w-px bg-gradient-to-b from-primary to-transparent" />
+      </div>
+
+      {/* Pixel grass strip at bottom */}
+      <div className="pixel-grass absolute bottom-0 left-0 right-0 h-8 pixelated" aria-hidden />
+    </section>
+  );
+};
