@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Logo } from "./Logo";
-import heroImg from "@/assets/hero-world.jpg";
+import heroImg from "/hero-world.jpg";
 import grassBlock from "@/assets/mc/grass.png";
 import diamondOre from "@/assets/mc/diamond-ore.png";
 import creeper from "@/assets/mc/creeper.png";
