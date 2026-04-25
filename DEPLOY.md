@@ -1,137 +1,76 @@
-# RSU Network Website – GitHub Pages Deployment
+# 🚀 RSU Network – Deployment auf GitHub Pages
 
-Diese Anleitung erklärt, wie du die RSU Network Website auf GitHub Pages veröffentlichen kannst.
+## ⚠️ Wichtig: Du darfst NICHT die Quelldateien hochladen!
 
-## Voraussetzungen
+GitHub Pages kann React/TypeScript nicht ausführen. Du musst zuerst einen **Build** erstellen.
 
-- Ein GitHub-Konto
-- Git auf deinem Computer installiert
+---
 
-## Schritt 1: Repository erstellen
+## ✅ Empfohlene Methode: Automatisches Deployment
 
-1. Gehe zu [GitHub](https://github.com) und melde dich an
-2. Klicke auf das **+** Symbol oben rechts → **New repository**
-3. Gib deinem Repository einen Namen (z.B. `rsu-network-website`)
-4. Wähle **Public** (damit GitHub Pages funktioniert)
-5. Klicke auf **Create repository**
+### Schritt 1: Repository erstellen & Code hochladen
 
-## Schritt 2: Dateien hochladen
-
-### Option A: Über die GitHub Website (einfach)
-
-1. Öffne dein neues Repository auf GitHub
-2. Klicke auf **Add file** → **Upload files**
-3. Lade den gesamten Inhalt des `dist`-Ordners hoch (siehe Schritt 3)
-
-### Option B: Über Git (empfohlen)
+1. Erstelle ein neues Repository auf GitHub (z.B. `rsu-digital-playground`)
+2. Lade den **gesamten Projekt-Code** hoch (alle Dateien aus dem Lovable-Editor – inklusive `package.json`, `src/`, `.github/`, etc.)
 
 ```bash
-# Lokalen Ordner erstellen
-mkdir rsu-network-website
-cd rsu-network-website
-
-# Git initialisieren
-git init
-
-# Remote Repository verbinden
-git remote add origin https://github.com/DEIN_USERNAME/rsu-network-website.git
-
-# Alle Dateien hinzufügen
+git clone https://github.com/DEIN_USERNAME/REPO_NAME.git
+# Kopiere alle Lovable-Projektdateien hinein
 git add .
-
-# Commit erstellen
 git commit -m "Initial commit"
-
-# Auf GitHub pushen
-git push -u origin main
+git push
 ```
 
-## Schritt 3: Build erstellen
+### Schritt 2: GitHub Pages aktivieren
 
-Bevor du die Website hochlädst, musst du einen Build erstellen:
+1. Gehe zu **Settings** → **Pages**
+2. Unter **Source** wähle: **GitHub Actions** (NICHT "Deploy from a branch"!)
+3. Speichern
+
+### Schritt 3: Warten
+
+Der Workflow `.github/workflows/deploy.yml` baut die Website automatisch und stellt sie bereit. Nach 1-2 Minuten ist sie live unter:
+
+```
+https://DEIN_USERNAME.github.io/REPO_NAME/
+```
+
+Bei jedem `git push` wird die Website automatisch neu gebaut. ✨
+
+---
+
+## 🔧 Manuelle Methode (falls du keine Actions verwenden willst)
+
+### Schritt 1: Lokal bauen
 
 ```bash
-# Im Projektordner
 npm install
 npm run build
 ```
 
-Dies erstellt einen `dist`-Ordner mit allen Dateien, die du brauchst.
+Es entsteht ein `dist/`-Ordner.
 
-## Schritt 4: GitHub Pages aktivieren
+### Schritt 2: Nur den `dist`-Inhalt hochladen
 
-1. Gehe zu deinem Repository auf GitHub
-2. Klicke auf **Settings** (oben rechts)
-3. Wähle im linken Menü **Pages**
-4. Unter **Source** wähle **Deploy from a branch**
-5. Wähle den **main** Branch und den **/(root)** Ordner
-6. Klicke auf **Save**
+Lade **nur den Inhalt** des `dist/`-Ordners (NICHT den Ordner selbst) ins Repository hoch.
 
-Nach einigen Minuten ist deine Website unter `https://DEIN_USERNAME.github.io/rsu-network-website` verfügbar!
+### Schritt 3: GitHub Pages aktivieren
 
-## Automatisches Deployment mit GitHub Actions (optional)
+1. Settings → Pages
+2. Source: **Deploy from a branch** → `main` → `/(root)`
 
-Wenn du bei jedem Push automatisch deployen möchtest, erstelle eine Datei `.github/workflows/deploy.yml`:
+---
 
-```yaml
-name: Deploy to GitHub Pages
+## 🐛 Fehlerbehebung
 
-on:
-  push:
-    branches: [ main ]
+**404 für `/src/main.tsx`:**
+→ Du hast die Quelldateien hochgeladen statt `dist/`. Siehe oben.
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+**404 für `/rsu-logo.svg`:**
+→ Gleiches Problem – die Build-Dateien fehlen.
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+**Weiße Seite:**
+→ Der `base`-Pfad in `vite.config.ts` steht auf `"./"` (relativ), das sollte funktionieren.
 
-jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-      
-      - name: Install dependencies
-        run: npm ci
-      
-      - name: Build
-        run: npm run build
-      
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-      
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: './dist'
-      
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-```
-
-## Wichtige Hinweise
-
-- Die Website verwendet **HashRouter** statt BrowserRouter, damit das Routing auf GitHub Pages funktioniert
-- Alle Links werden automatisch mit `#` prefixiert (z.B. `/#/plugins`)
-- Die 404.html ist konfiguriert, um alle Anfragen an die App weiterzuleiten
-
-## Support
-
-Bei Fragen oder Problemen:
-1. Prüfe die [GitHub Pages Dokumentation](https://docs.github.com/pages)
-2. Schau in die Browser-Konsole auf Fehler
-3. Vergewissere dich, dass alle Dateien im `dist`-Ordner sind
+**Routen funktionieren nicht:**
+→ Wir nutzen `HashRouter`, die URLs sehen aus wie `/#/plugins`. Das ist korrekt.
