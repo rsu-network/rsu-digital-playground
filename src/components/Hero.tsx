@@ -12,13 +12,13 @@ export const Hero = () => {
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-sky" />
         <img
-          src="/hero-world.jpg"
-          alt="Minecraft Welt mit schwebenden Inseln"
-          className="h-full w-full object-cover opacity-50 mix-blend-multiply"
-          width={1920}
-          height={1080}
+          src="/wiki/trails-tales.jpg"
+          alt="Minecraft Welt – Trails & Tales Artwork"
+          className="h-full w-full object-cover opacity-40 mix-blend-multiply"
+          width={1600}
+          height={900}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/30 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/40 to-background" />
         <div className="absolute inset-0 grid-bg opacity-60" />
       </div>
 
@@ -175,7 +175,7 @@ export const Hero = () => {
             </div>
           </div>
 
-          <h1 className="mt-8 font-display text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight animate-rise" style={{ animationDelay: "120ms" }}>
+          <h1 className="mt-8 font-display text-5xl sm:text-6xl lg:text-7xl font-black leading-[1.05] tracking-tight animate-rise" style={{ animationDelay: "120ms" }}>
             Unser <span className="text-gradient-brand">Minecraft</span> für{" "}
             unsere <span className="text-gradient-rainbow">Schule</span>.
           </h1>
@@ -188,10 +188,10 @@ export const Hero = () => {
 
           <div className="mt-10 flex flex-wrap items-center gap-4 animate-rise" style={{ animationDelay: "240ms" }}>
             <Button variant="block" size="xl" asChild>
-              <a href="#/mitmachen">▶ Jetzt mitmachen</a>
+              <a href="#mitmachen">▶ Jetzt mitmachen</a>
             </Button>
             <Button variant="blockDiamond" size="xl" asChild>
-              <a href="#/vision">💎 Konzept ansehen</a>
+              <a href="#vision">💎 Konzept ansehen</a>
             </Button>
           </div>
 

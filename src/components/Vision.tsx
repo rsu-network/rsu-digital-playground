@@ -36,7 +36,7 @@ export const Vision = () => {
           {goals.map((g, i) => (
             <div
               key={g.title}
-              className="group relative overflow-hidden rounded-3xl border border-border bg-gradient-card p-6 shadow-card transition-all duration-500 hover:-translate-y-1 hover:border-primary/40"
+              className="group relative overflow-hidden rounded-3xl border-4 border-foreground/15 bg-gradient-card p-6 shadow-card transition-all duration-300 hover:-translate-y-2 hover:rotate-[-1deg] hover:border-primary hover:shadow-glow"
               style={{ animationDelay: `${i * 60}ms` }}
             >
               <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-primary/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity" />

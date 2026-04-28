@@ -1,76 +1,30 @@
-# 🚀 RSU Network – Deployment auf GitHub Pages
+# RSU Network – Deployment
 
-## ⚠️ Wichtig: Du darfst NICHT die Quelldateien hochladen!
+## Option A: Netlify Drag & Drop (einfachster Weg)
 
-GitHub Pages kann React/TypeScript nicht ausführen. Du musst zuerst einen **Build** erstellen.
+1. **Build erstellen** (lokal im Projekt-Ordner):
+   ```bash
+   npm install
+   npm run build
+   ```
+2. Im Projekt entsteht ein Ordner `dist/`.
+3. Gehe auf <https://app.netlify.com/drop>.
+4. Ziehe den **kompletten `dist/`-Ordner** ins Browser-Fenster.
+5. Fertig – Netlify zeigt dir eine URL wie `https://random-name.netlify.app`.
 
----
+> Die Datei `_redirects` (im `dist/`-Ordner nach dem Build) sorgt dafür, dass
+> Deep Links wie `/plugins` auch beim Refresh funktionieren.
 
-## ✅ Empfohlene Methode: Automatisches Deployment
+## Option B: Netlify mit GitHub verbinden (Auto-Deploy)
 
-### Schritt 1: Repository erstellen & Code hochladen
+1. Repo auf GitHub pushen.
+2. Auf <https://app.netlify.com> → **Add new site → Import from Git**.
+3. Repo auswählen. Build-Settings werden aus `netlify.toml` gelesen:
+   - Build command: `npm run build`
+   - Publish directory: `dist`
+4. **Deploy site** klicken. Jeder Push auf `main` deployed automatisch neu.
 
-1. Erstelle ein neues Repository auf GitHub (z.B. `rsu-digital-playground`)
-2. Lade den **gesamten Projekt-Code** hoch (alle Dateien aus dem Lovable-Editor – inklusive `package.json`, `src/`, `.github/`, etc.)
+## Custom Domain
 
-```bash
-git clone https://github.com/DEIN_USERNAME/REPO_NAME.git
-# Kopiere alle Lovable-Projektdateien hinein
-git add .
-git commit -m "Initial commit"
-git push
-```
-
-### Schritt 2: GitHub Pages aktivieren
-
-1. Gehe zu **Settings** → **Pages**
-2. Unter **Source** wähle: **GitHub Actions** (NICHT "Deploy from a branch"!)
-3. Speichern
-
-### Schritt 3: Warten
-
-Der Workflow `.github/workflows/deploy.yml` baut die Website automatisch und stellt sie bereit. Nach 1-2 Minuten ist sie live unter:
-
-```
-https://DEIN_USERNAME.github.io/REPO_NAME/
-```
-
-Bei jedem `git push` wird die Website automatisch neu gebaut. ✨
-
----
-
-## 🔧 Manuelle Methode (falls du keine Actions verwenden willst)
-
-### Schritt 1: Lokal bauen
-
-```bash
-npm install
-npm run build
-```
-
-Es entsteht ein `dist/`-Ordner.
-
-### Schritt 2: Nur den `dist`-Inhalt hochladen
-
-Lade **nur den Inhalt** des `dist/`-Ordners (NICHT den Ordner selbst) ins Repository hoch.
-
-### Schritt 3: GitHub Pages aktivieren
-
-1. Settings → Pages
-2. Source: **Deploy from a branch** → `main` → `/(root)`
-
----
-
-## 🐛 Fehlerbehebung
-
-**404 für `/src/main.tsx`:**
-→ Du hast die Quelldateien hochgeladen statt `dist/`. Siehe oben.
-
-**404 für `/rsu-logo.svg`:**
-→ Gleiches Problem – die Build-Dateien fehlen.
-
-**Weiße Seite:**
-→ Der `base`-Pfad in `vite.config.ts` steht auf `"./"` (relativ), das sollte funktionieren.
-
-**Routen funktionieren nicht:**
-→ Wir nutzen `HashRouter`, die URLs sehen aus wie `/#/plugins`. Das ist korrekt.
+In Netlify: **Site settings → Domain management → Add custom domain**
+(z. B. `rsu-network.de`). Netlify generiert automatisch ein SSL-Zertifikat.

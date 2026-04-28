@@ -372,7 +372,7 @@ const Plugins = () => {
             Ein Plugin fehlt oder du brauchst Hilfe?
           </p>
           <Button variant="hero" className="mt-4" asChild>
-            <a href="#/mitmachen">Im Discord fragen</a>
+            <a href="/#mitmachen">Im Discord fragen</a>
           </Button>
         </div>
       </section>
