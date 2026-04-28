@@ -12,13 +12,13 @@ export const Hero = () => {
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-sky" />
         <img
-          src="/hero-world.jpg"
-          alt="Minecraft Welt mit schwebenden Inseln"
-          className="h-full w-full object-cover opacity-50 mix-blend-multiply"
-          width={1920}
-          height={1080}
+          src="/wiki/trails-tales.jpg"
+          alt="Minecraft Welt – Trails & Tales Artwork"
+          className="h-full w-full object-cover opacity-40 mix-blend-multiply"
+          width={1600}
+          height={900}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/30 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/40 to-background" />
         <div className="absolute inset-0 grid-bg opacity-60" />
       </div>
 
