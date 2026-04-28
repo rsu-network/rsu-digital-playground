@@ -1,19 +1,14 @@
 import { SectionHeader } from "./SectionHeader";
-import { ImageIcon } from "lucide-react";
 
-const placeholders = [
-  { tag: "Spawn", aspect: "aspect-[4/3]" },
-  { tag: "Skyline", aspect: "aspect-square" },
-  { tag: "Burg", aspect: "aspect-[4/3]" },
-  { tag: "Mittelalter-Dorf", aspect: "aspect-[4/3]" },
-  { tag: "Farm", aspect: "aspect-square" },
-  { tag: "Redstone", aspect: "aspect-[4/3]" },
-  { tag: "Markt", aspect: "aspect-[4/3]" },
-  { tag: "Nether-Hub", aspect: "aspect-square" },
-  { tag: "End City", aspect: "aspect-[4/3]" },
-  { tag: "Event Map", aspect: "aspect-[4/3]" },
-  { tag: "Parkour", aspect: "aspect-square" },
-  { tag: "Community Build", aspect: "aspect-[4/3]" },
+const items = [
+  { src: "/wiki/trails-tales.jpg", tag: "Trails & Tales", aspect: "aspect-[4/3]" },
+  { src: "/wiki/alex-creeper.jpg", tag: "Erste Begegnung", aspect: "aspect-square" },
+  { src: "/wiki/village-pillage.jpg", tag: "Dorf & Plünderer", aspect: "aspect-[4/3]" },
+  { src: "/wiki/meet-villagers.jpg", tag: "Die Dorfbewohner", aspect: "aspect-[4/3]" },
+  { src: "/wiki/nether-update.jpg", tag: "Im Nether", aspect: "aspect-square" },
+  { src: "/wiki/alex-nether.jpg", tag: "Alex erkundet", aspect: "aspect-[4/3]" },
+  { src: "/wiki/alex-artwork.jpg", tag: "Alex Artwork", aspect: "aspect-[4/3]" },
+  { src: "/mc/creeper-render.png", tag: "Creeper-Alarm", aspect: "aspect-square" },
 ];
 
 export const Gallery = () => {
@@ -25,67 +20,44 @@ export const Gallery = () => {
           eyebrow="Galerie"
           title={
             <>
-              Was bei uns auf dem{" "}
-              <span className="text-gradient-brand">Server entsteht</span>.
+              Inspiration aus der{" "}
+              <span className="text-gradient-brand">Minecraft-Welt</span>.
             </>
           }
-          description="Eine kleine Auswahl von Builds, Events und Momenten – Bilder folgen, sobald die ersten Projekte fertig sind."
+          description="Offizielle Artworks von Mojang als Vorgeschmack – deine eigenen Builds vom RSU-Server folgen hier, sobald die ersten Projekte fertig sind."
         />
 
-        <div className="mt-14 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-          {placeholders.map((p, i) => {
-            const palettes = [
-              ["hsl(95 70% 45%)", "hsl(28 55% 35%)"], // grass
-              ["hsl(200 80% 55%)", "hsl(210 60% 30%)"], // water
-              ["hsl(45 80% 55%)", "hsl(30 60% 40%)"], // sand
-              ["hsl(0 0% 55%)", "hsl(0 0% 30%)"], // stone
-              ["hsl(280 50% 50%)", "hsl(280 40% 25%)"], // end
-              ["hsl(15 70% 45%)", "hsl(15 60% 25%)"], // nether
-            ];
-            const [c1, c2] = palettes[i % palettes.length];
-            return (
-              <figure
-                key={i}
-                className={`group relative overflow-hidden rounded-2xl border-2 border-border bg-gradient-card ${p.aspect} hover:border-primary/60 transition`}
-              >
-                {/* Pixelated minecraft-style block pattern */}
-                <div
-                  className="absolute inset-0 pixelated"
-                  style={{
-                    backgroundImage: `
-                      linear-gradient(45deg, ${c1} 25%, transparent 25%),
-                      linear-gradient(-45deg, ${c1} 25%, transparent 25%),
-                      linear-gradient(45deg, transparent 75%, ${c2} 75%),
-                      linear-gradient(-45deg, transparent 75%, ${c2} 75%)
-                    `,
-                    backgroundSize: "20px 20px",
-                    backgroundPosition: "0 0, 0 10px, 10px -10px, -10px 0",
-                    opacity: 0.55,
-                  }}
-                />
-                <div className="absolute inset-0 bg-gradient-to-br from-background/40 via-transparent to-background/60" />
-
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-none border-2 border-foreground/30 bg-background/80 backdrop-blur text-foreground group-hover:scale-110 transition-transform">
-                    <ImageIcon size={18} />
-                  </div>
-                  <p className="mt-3 font-pixel text-[8px] uppercase tracking-[0.2em] text-foreground/70">
-                    Bald
-                  </p>
-                  <p className="mt-2 font-display text-sm font-semibold text-foreground drop-shadow">
-                    {p.tag}
-                  </p>
-                </div>
-
-                <div className="absolute inset-0 ring-1 ring-inset ring-border/40 group-hover:ring-primary/40 transition" />
-              </figure>
-            );
-          })}
+        <div className="mt-14 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          {items.map((p, i) => (
+            <figure
+              key={i}
+              className={`group relative overflow-hidden rounded-3xl border-4 border-foreground/10 bg-card ${p.aspect} shadow-card hover:border-primary hover:-translate-y-1 hover:rotate-1 transition-all duration-300`}
+            >
+              <img
+                src={p.src}
+                alt={p.tag}
+                className="absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition-transform duration-500"
+                loading="lazy"
+              />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-3">
+                <p className="font-pixel text-[9px] uppercase tracking-[0.2em] text-white/80">
+                  Artwork
+                </p>
+                <p className="mt-0.5 font-display text-sm font-bold text-white drop-shadow">
+                  {p.tag}
+                </p>
+              </div>
+            </figure>
+          ))}
         </div>
 
-        <p className="mt-8 text-center text-xs text-muted-foreground">
-          Du hast einen krassen Build? Schick uns dein Screenshot im Discord –
-          er landet hier in der Galerie.
+        <p className="mt-10 text-center text-xs text-muted-foreground">
+          Bilder © Mojang Studios · via{" "}
+          <a href="https://minecraft.wiki" className="underline hover:text-foreground" target="_blank" rel="noopener noreferrer">
+            minecraft.wiki
+          </a>
+          . Du hast einen krassen Build? Schick uns dein Screenshot im Discord –
+          er landet hier in der Galerie!
         </p>
       </div>
     </section>
