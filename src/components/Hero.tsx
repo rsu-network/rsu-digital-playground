@@ -175,7 +175,7 @@ export const Hero = () => {
             </div>
           </div>
 
-          <h1 className="mt-8 font-display text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight animate-rise" style={{ animationDelay: "120ms" }}>
+          <h1 className="mt-8 font-display text-5xl sm:text-6xl lg:text-7xl font-black leading-[1.05] tracking-tight animate-rise" style={{ animationDelay: "120ms" }}>
             Unser <span className="text-gradient-brand">Minecraft</span> für{" "}
             unsere <span className="text-gradient-rainbow">Schule</span>.
           </h1>
