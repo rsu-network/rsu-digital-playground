@@ -19,7 +19,7 @@ export const YouTube = () => {
         title={
           <>
             Lernvideos auf{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-brand">
+            <span className="inline-block px-3 py-1 rounded-xl bg-[#FF0000] text-white shadow-lg border-4 border-foreground/10">
               YouTube
             </span>
           </>
