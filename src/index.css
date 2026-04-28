@@ -252,8 +252,23 @@
 }
 
 @keyframes wiggle {
-  0%, 100% { transform: rotate(-4deg); }
-  50% { transform: rotate(4deg); }
+  0%, 100% { transform: rotate(-6deg); }
+  50% { transform: rotate(6deg); }
+}
+
+/* Comic / kid-friendly utilities */
+.comic-outline {
+  text-shadow:
+    -2px -2px 0 hsl(220 40% 15%),
+     2px -2px 0 hsl(220 40% 15%),
+    -2px  2px 0 hsl(220 40% 15%),
+     2px  2px 0 hsl(220 40% 15%),
+     0 4px 0 hsl(220 40% 15% / 0.3);
+}
+
+.comic-card {
+  border: 4px solid hsl(220 40% 15%);
+  box-shadow: 6px 6px 0 0 hsl(220 40% 15%);
 }
 
 @keyframes float {
