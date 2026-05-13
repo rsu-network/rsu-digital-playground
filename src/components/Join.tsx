@@ -5,7 +5,7 @@ import { toast } from "sonner";
 
 const SERVER_IP = "mc.rsu.network";
 const VERSION = "1.21.x · Java Edition";
-const DISCORD_URL = "https://discord.gg/uREKErvXXf";
+const DISCORD_URL = "https://discord.gg/hQP6ybWCHe";
 
 export const Join = () => {
   const [copied, setCopied] = useState(false);
