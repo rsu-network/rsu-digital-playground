@@ -12,6 +12,7 @@ import { Safety } from "@/components/Safety";
 import { Join } from "@/components/Join";
 import { FAQ } from "@/components/FAQ";
 import { Footer } from "@/components/Footer";
+import { FloatingActions } from "@/components/FloatingActions";
 
 const Index = () => {
   return (
@@ -30,6 +31,7 @@ const Index = () => {
       <Join />
       <FAQ />
       <Footer />
+      <FloatingActions />
     </main>
   );
 };
