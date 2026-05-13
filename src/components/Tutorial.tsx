@@ -83,10 +83,6 @@ export const Tutorial = () => {
           </ol>
         </div>
 
-        <div className="mt-10 rounded-2xl border border-border bg-muted/30 p-6 text-sm text-muted-foreground">
-          <span className="font-semibold text-foreground">Technische Umsetzung:</span>{" "}
-          Realisiert über das Citizens-Plugin (NPCs) und WorldGuard-Regionen. Spieler ohne abgeschlossenes Tutorial haben automatisch eingeschränkte Rechte.
-        </div>
       </div>
     </section>
   );

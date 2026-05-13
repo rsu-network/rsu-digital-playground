@@ -1,12 +1,21 @@
-import { Youtube, Play, Bell } from "lucide-react";
+import { Youtube, Play, Bell, ExternalLink } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { SectionHeader } from "./SectionHeader";
 
-const placeholders = [
-  { title: "Erste Schritte auf dem Server", duration: "Bald verfügbar" },
-  { title: "Lands & Claims erklärt", duration: "Bald verfügbar" },
-  { title: "Jobs & Geld verdienen", duration: "Bald verfügbar" },
+const CHANNEL_URL = "https://www.youtube.com/@rsu.network";
+
+const videos = [
+  {
+    id: "Fj0Xmkjdf5Q",
+    title: "RSU-NETWORK Server Tutorial",
+    desc: "Schritt-für-Schritt: So joinst du den Server.",
+  },
+  {
+    id: "hzddor5AHM0",
+    title: "Mit der Konsole beitreten",
+    desc: "Bedrock-/Konsolen-Spieler – so geht's.",
+  },
 ];
 
 export const YouTube = () => {
@@ -24,58 +33,61 @@ export const YouTube = () => {
             </span>
           </>
         }
-        description="Wir bauen gerade unseren YouTube-Kanal auf. Dort findest du Schritt-für-Schritt Tutorials zu allen wichtigen Plugins, Bauideen und Server-Updates."
+        description="Auf unserem Kanal findest du Schritt-für-Schritt Tutorials zum Server, Plugins und Updates."
       />
 
-      <div className="mt-12 grid md:grid-cols-3 gap-5">
-        {placeholders.map((v, i) => (
+      <div className="mt-12 grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        {videos.map((v) => (
           <Card
-            key={i}
-            className="group relative overflow-hidden bg-card/50 border-border/60 hover:border-primary/40 transition-all"
+            key={v.id}
+            className="group relative overflow-hidden comic-card bg-card hover:-translate-y-2 hover:rotate-[-1deg] transition-all duration-300"
           >
-            <div className="aspect-video relative bg-gradient-to-br from-muted/40 to-muted/10 flex items-center justify-center overflow-hidden">
-              <div
-                className="absolute inset-0 opacity-20"
-                style={{
-                  backgroundImage:
-                    "linear-gradient(45deg, hsl(var(--primary)) 25%, transparent 25%, transparent 75%, hsl(var(--primary)) 75%), linear-gradient(45deg, hsl(var(--primary)) 25%, transparent 25%, transparent 75%, hsl(var(--primary)) 75%)",
-                  backgroundSize: "20px 20px",
-                  backgroundPosition: "0 0, 10px 10px",
-                }}
-              />
-              <div className="relative h-14 w-14 rounded-full bg-primary/90 text-primary-foreground flex items-center justify-center shadow-glow group-hover:scale-110 transition-transform">
-                <Play className="h-6 w-6 ml-0.5" fill="currentColor" />
+            <a
+              href={`https://www.youtube.com/watch?v=${v.id}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+            >
+              <div className="aspect-video relative overflow-hidden">
+                <img
+                  src={`https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`}
+                  alt={v.title}
+                  className="absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="h-16 w-16 rounded-full bg-[#FF0000] text-white flex items-center justify-center shadow-glow group-hover:scale-110 transition-transform border-4 border-white">
+                    <Play className="h-7 w-7 ml-0.5" fill="currentColor" />
+                  </div>
+                </div>
               </div>
-              <div className="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-background/80 backdrop-blur text-[10px] font-mono text-muted-foreground">
-                {v.duration}
+              <div className="p-5">
+                <h3 className="font-display font-bold text-lg text-foreground">
+                  {v.title}
+                </h3>
+                <p className="mt-1 text-sm text-muted-foreground">{v.desc}</p>
               </div>
-            </div>
-            <div className="p-4">
-              <h3 className="font-display font-semibold text-foreground">
-                {v.title}
-              </h3>
-              <p className="mt-1 text-xs text-muted-foreground">
-                Platzhalter — Video folgt
-              </p>
-            </div>
+            </a>
           </Card>
         ))}
       </div>
 
       <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
-        <Button variant="hero" size="lg" asChild>
+        <Button variant="block" size="xl" asChild>
           <a
-            href="https://youtube.com"
+            href={CHANNEL_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="gap-2"
           >
             <Youtube className="h-5 w-5" />
             Kanal abonnieren
+            <ExternalLink className="h-4 w-4 opacity-70" />
           </a>
         </Button>
         <div className="inline-flex items-center gap-2 text-sm text-muted-foreground">
-          <Bell className="h-4 w-4" /> Glocke aktivieren – wir starten bald.
+          <Bell className="h-4 w-4" /> Glocke aktivieren – mehr Videos folgen!
         </div>
       </div>
     </section>

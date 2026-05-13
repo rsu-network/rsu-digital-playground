@@ -1,6 +1,5 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
-import { ServerStatus } from "@/components/ServerStatus";
 import { Stats } from "@/components/Stats";
 import { Vision } from "@/components/Vision";
 import { Tutorial } from "@/components/Tutorial";
@@ -10,7 +9,6 @@ import { Events } from "@/components/Events";
 import { Gallery } from "@/components/Gallery";
 import { YouTube } from "@/components/YouTube";
 import { Safety } from "@/components/Safety";
-import { Roadmap } from "@/components/Roadmap";
 import { Join } from "@/components/Join";
 import { FAQ } from "@/components/FAQ";
 import { Footer } from "@/components/Footer";
@@ -20,7 +18,6 @@ const Index = () => {
     <main className="min-h-screen overflow-x-hidden">
       <Navbar />
       <Hero />
-      <ServerStatus />
       <Stats />
       <Vision />
       <Tutorial />
@@ -30,7 +27,6 @@ const Index = () => {
       <Gallery />
       <YouTube />
       <Safety />
-      <Roadmap />
       <Join />
       <FAQ />
       <Footer />

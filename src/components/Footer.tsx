@@ -80,7 +80,7 @@ export const Footer = () => {
               <li>Server: mc.rsu.network</li>
               <li>
                 <a
-                  href="https://discord.gg/uREKErvXXf"
+                  href="https://discord.gg/hQP6ybWCHe"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-foreground transition-colors"
