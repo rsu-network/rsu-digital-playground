@@ -10,6 +10,7 @@ const links = [
   { href: "/#economy", label: "Economy" },
   { href: "/#events", label: "Events" },
   { href: "/plugins", label: "Plugins" },
+  { href: "/plugins-kids", label: "Für Kinder 🎮" },
   { href: "/#youtube", label: "YouTube" },
   { href: "/#mitmachen", label: "Mitmachen" },
 ];
